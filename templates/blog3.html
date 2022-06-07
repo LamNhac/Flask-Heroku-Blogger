@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edica :: Home</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='vendors/font-awesome/css/all.min.css') }}">
+    <link href="{{ url_for('static',filename='vendors/aos/aos.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static',filename='vendors/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/loader.js') }}"></script>
+</head>
+<body>
+    <div class="edica-loader"></div>
+    <header class="edica-header edica-landing-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><img src="{{ url_for('static',filename='images/logo.svg') }}" alt="Edica"></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="edicaMainNav">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('blog') }}">Blog</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </nav>
+           
+        </div>
+    </header>
+
+    <main class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11 mx-auto">
+                    <h1 class="edica-page-title" data-aos="fade-up">Những lý do bạn nên chọn Flask</h1>
+                    <section class="edica-about-intro py-5">
+                        <div class="row">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="150">
+                                <h2 class="intro-title pb-3 pb-md-0 mb-4 mb-md-0">Flask là một mirco web framework</h2>
+                            </div>
+                            <div class="col-md-6 intro-content" data-aos="fade-left" data-aos-delay="150">
+                                <p><span class="first-letter">F</span>lask là một micro web framework được viết bằng python, không yêu cầu tool hay thư viện cụ thể nào</p>
+                                <p>“Micro” không có nghĩa là thiếu chức năng mà “micro” theo triết lý thiết kế là cung cấp một lõi chức năng “súc tích” nhất cho ứng dụng web nhưng người dùng có thể mở rộng bất cứ lúc nào.</p>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    <section class="edica-about-vision py-5">
+                        <div class="row">
+                            <div class="col-md-6 pb-3 pb-md-0 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
+                                <img src="{{ url_for('static',filename='images/anh-nhung-ly-do-ma-ban-nen-chon-flask-2.png') }}" alt="vision" class="img-fluid"> 
+                            </div>
+                            <div class="col-md-6 d-flex flex-column justify-content-center">
+                                <h2 class="vision-title" data-aos="fade-left">Flask dễ cài đặt và triển khai</h2>
+                                <p class="vision-text" data-aos="fade-left">
+                                    Sau khi cài đặt Python, để cài đặt Flask chỉ cần bạn gõ lệnh: pip install Flask</p>
+                                <p class="vision-text" data-aos="fade-left">
+                                    Bây giờ chúng ta thử tạo ứng dụng web với câu chào Hello World!. Thật đơn giản bạn sẽ tạo một folder với tên folder là tên ứng dụng, sau đó, tạo một tập tin .py và viết code. Ví dụ như: hello.py như sau:</b></p>
+                                <p class="vision-text" data-aos="fade-left" >
+                                    Sau đó chỉ cần run là trang web này sẽ hiển thị trên <span style="color:#0066ff;">http://127.0.0.1:5000/</span></p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="edica-about-goal py-5 mb-5">
+                        <div class="row">
+                            <div class="col-md-6 mb-4 mb-md-0 d-flex flex-column justify-content-center" data-aos="fade-right">
+                                <h2 class="goal-title">Flask là một lựa chọn thông minh </h2>
+                                <p class="goal-text">
+                                    Flask thật sự phù hợp cho việc xây dựng các web application có quy mô vừa và nhỏ, các API và web services:
+                                </p>
+                                <ul class="landing-about-list">
+                                    <li>Xây dựng web application rất giống với việc viết các module Python chuẩn, cấu trúc gọn gàng và rõ ràng.</li>
+                                    <li>Thay vì cung cấp hết tất cả mọi thứ, Flask cung cấp cho người dùng các thành phần cốt lõi thường được sử dụng nhất của khung ứng dụng web như URL routing, request & response object, template... </li>
+                                    <li>Với Flask, việc chọn component nào cho ứng dụng là việc của chúng ta. Điều này thật tuyệt, vì mỗi web application có những đặc điểm và tính năng riêng, nó không phần phải chứa các component mà nó không dùng. </li>
+                                    
+                                </ul>
+                                
+                            </div>
+                            <div class="col-md-6" data-aos="fade-left">
+                                <img src="{{ url_for('static',filename='images/anh-flask ve-uu-diem-va-nhuoc-diem.jpg') }}" alt="goal" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="edica-about-vision py-5">
+                        <div class="row">
+                            <div class="col-md-6 pb-3 pb-md-0 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
+                                <img src="{{ url_for('static',filename='images/anh-nhung-ly-do-ma-ban-nen-chon-flask-3.png') }}" alt="vision" class="img-fluid"> 
+                            </div>
+                            <div class="col-md-6 d-flex flex-column justify-content-center">
+                                <h2 class="vision-title" data-aos="fade-left">Flask giúp bạn tập trung xây dựng ý tưởng, mục tiêu của riêng mình</h2>
+                                <p class="vision-text" data-aos="fade-left">
+                                    Flask có kiến trúc nhỏ, gọn nên bạn hoàn toàn không bị bó buộc bởi bộ khung cồng kềnh, không gặp bất cứ khó khăn nào khi cấu hình hay tổ chức ứng dụng.</p>
+                                <p class="vision-text" data-aos="fade-left">
+                                    Không những thế, Flask còn có các ưu điểm nổi bật như: cực kỳ linh hoạt, tối giản, dễ tìm hiểu và sử dụng, định tuyến dễ dàng, rất dễ mở rộng.</b></p>
+                                <p class="vision-text" data-aos="fade-left" >
+                                    Sau đó chỉ cần run là trang web này sẽ hiển thị trên <span style="color:#0066ff;">http://127.0.0.1:5000/</span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="edica-about-goal py-5 mb-5">
+                        <div class="row">
+                            <div class="col-md-6 mb-4 mb-md-0 d-flex flex-column justify-content-center" data-aos="fade-right">
+                                <h2 class="goal-title">Nguồn tài liệu tham khảo về Flask rất phong phú</h2>
+                                <p class="goal-text">
+                                    Flask cung cấp rất nhiều tài liệu từ cài đặt đến thực hiện và triển khai, từ hướng dẫn nhanh đến hướng dẫn chi tiết.
+                                </p>
+                                <p class="goal-text">
+                                    Bạn có thể dễ dàng tìm kiếm, tham khảo, học tập về lập trình web application với Flask framework miễn phí trên Internet.
+                                </p>
+                                <p class="goal-text">
+                                    Một số link tham khảo:
+                                </p>
+                                <p class="goal-text">
+                                   <a href="https://flask.palletsprojects.com/en/1.0.x/tutorial/">https://flask.palletsprojects.com/en/1.0.x/tutorial/</a>
+                                </p>
+                                <p class="goal-text">
+                                    <a href="https://pythonspot.com/flask-web-app-with-python/">https://pythonspot.com/flask-web-app-with-python/</a>
+                                 </p>
+                                 <p class="goal-text">
+                                    <a href="https://code.visualstudio.com/docs/python/tutorial-flask">https://code.visualstudio.com/docs/python/tutorial-flask</a>
+                                 </p>
+                                 <p class="goal-text">
+                                    <a href="http://exploreflask.com/en/latest/">http://exploreflask.com/en/latest/</a>
+                                 </p>
+                                
+                            </div>
+                            <div class="col-md-6" data-aos="fade-left">
+                                <img src="{{ url_for('static',filename='images/anh-flask ve-uu-diem-va-nhuoc-diem.jpg') }}" alt="goal" class="img-fluid">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="edica-landing-section edica-landing-blog">
+                        <div class="container">
+                            <p>Các bài viết không liên quan khác<p>
+                                <p><span> <a href="{{ url_for('blog1') }}">Tiểu sử về Nguyễn Ngọc Tư</a></span></p>
+                                <p><span> <a href="{{ url_for('blog2') }}">Giới thiệu về Flask</a></span></p>
+                        </div>
+                    </section>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="edica-footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row footer-widget-area">
+                <div class="col-md-3">
+                    <a href="index.html" class="footer-brand-wrapper">
+                        <img src="{{ url_for('static',filename='images/logo.svg') }}" alt="edica logo">
+                    </a>
+                    <p class="Contact">ngodinhluan567@gmail.com</p>
+                    <p class="contact-details">+123456789</p>
+                    <nav class="footer-social-links">
+                        <a href="https://www.facebook.com/ldn3004/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/naul_dinh/"><i class="fab fa-instagram"></i></a>
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <nav class="footer-nav">
+                        <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+                        <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                        
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <nav class="footer-nav">
+                        <a href="{{ url_for('blog') }}" class="nav-link">Blog</a>
+                        <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+                       
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <div class="dropdown footer-country-dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="footerCountryDropdown" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                   <span class="flag-icon flag-icon-vn flag-icon-squared"></span> Viet Nam <i class="fas fa-chevron-down ml-2"></i>
+                                </button>
+                        <div class="dropdown-menu" aria-labelledby="footerCountryDropdown">
+                            <button class="dropdown-item" href="#">
+                                    <span class="flag-icon flag-icon-us flag-icon-squared"></span> United States
+                                </button>
+                            <button class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-au flag-icon-squared"></span> Australia
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </footer>
+    <script src="{{ url_for('static',filename='vendors/popper.js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendors/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+    <script>
+        AOS.init({
+            duration: 2000
+        });
+      </script>
+</body>
+
+</html>

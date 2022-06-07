@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogndl :: Home</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='vendors/font-awesome/css/all.min.css') }}">
+    <link href="{{ url_for('static',filename='vendors/aos/aos.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static',filename='vendors/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/loader.js') }}"></script>
+</head>
+<body>
+    <div class="edica-loader"></div>
+    <header class="edica-header edica-landing-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><img src="{{ url_for('static',filename='images/logo.svg') }}" alt="Edica"></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="edicaMainNav">
+                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('blog') }}">Blog</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </nav>
+            <div class="edica-landing-header-content">
+               <div id="edicaLandingHeaderCarousel" class="carousel slide" data-ride="carousel">
+                   <ol class="carousel-indicators">
+                       <li data-target="#edicaLandingHeaderCarousel" data-slide-to="0" class="active">.01</li>
+                       <li data-target="#edicaLandingHeaderCarousel" data-slide-to="1">.02</li>
+                       <li data-target="#edicaLandingHeaderCarousel" data-slide-to="2">.03</li>
+                   </ol>
+                   <div class="carousel-inner" role="listbox">
+                       <div class="carousel-item active">
+                           <div class="row">
+                               <div class="col-md-6 carousel-content-wrapper">
+                                   <h1>Chào mọi người</h1>
+                                   <p>Đây là blog của mình </p>
+                                   
+                                   
+                               </div>
+                               <div class="col-md-6 carousel-img-wrapper">
+                                   <img src="{{ url_for('static',filename='images/slide1.jpg') }}" alt="carousel-img" class="img-fluid" width="350px">
+                               </div>
+                           </div>
+                       </div>
+                       <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6 carousel-content-wrapper">
+                                    <h1>Nhưng mà ...</h1>
+                                    <p>Nếu bạn vô được web này thì chúng ta có duyên với nhau đấy :D</p>
+                                
+                                </div>
+                                <div class="col-md-6 carousel-img-wrapper">
+                                    <img src="{{ url_for('static',filename='images/slide2.jpg') }}" alt="carousel-img" class="img-fluid" width="350px">
+                                </div>
+                            </div>
+                       </div>
+                       <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6 carousel-content-wrapper">
+                                    <h1>Hiện tại thì ...</h1>
+                                    <p>Mình đang học DNTU năm 3 </p>
+                                    
+                                </div>
+                                <div class="col-md-6 carousel-img-wrapper">
+                                    <img src="{{ url_for('static',filename='images/slide3.jpg') }}" alt="carousel-img" class="img-fluid" width="350px">
+                                </div>
+                            </div>
+                       </div>
+                   </div>
+               </div> 
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="edica-landing-section edica-landing-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up-right">
+                        <h4 class="edica-landing-section-subtitle-alt">ABOUT</h4>
+                        <h2 class="edica-landing-section-title">Chào bạn. </h2>
+                        <p>Mình là sinh viên năm cuối học ngành Công nghệ thông tin, Đại học Công nghệ Đồng Nai. Tại blog này bạn có thể tìm thấy một phần bản thân của mình.</p>
+                        <ul class="landing-about-list">
+                            <li>Mình có thể lập trình từ cơ bản đến nâng cao một chút, nếu là game mình sẽ hứng thú vì mình rất muốn lập trình một game.</li>
+                            <li>Ngoài công việc và học tập chính, mình tham gia vào các nhóm dịch truyện phi lợi nhuận như một sở thích cá nhân.</li>
+                            <li>Tuy ít nói nhưng mình sẵn sàng kết bạn nếu có cơ hội và lời mời, từ chơi game cho đến đi chơi.
+                                Và còn nhiều điều thú vị mà bạn sẽ tìm ra trong blog này nữa đấy. </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up-left">
+                        <img src="{{ url_for('static',filename='images/anh-ve-about.jpg') }}" width="468px" alt="about" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="edica-landing-section edica-landing-blog">
+            <div class="container">
+                <h4 class="edica-landing-section-subtitle" data-aos="fade-up">Blog</h4>
+                <h2 class="edica-landing-section-title" data-aos="fade-up">Xem các Blog mới nhất của mình <br> ở đây nha.</h2>
+                <div class="row">
+                    <div class="col-md-4 landing-blog-post" data-aos="fade-right">
+                        <img src="{{ url_for('static',filename='images/anh-blog-nguyen-ngoc-tu.jpg') }}" alt="blog post" class="blog-post-thumbnail">
+                        <h4 class="blog-post-title">Tiểu sử Nguyễn Ngọc Tư</h4>
+                        <a href="{{ url_for('blog1') }}" class="blog-post-link">Đọc ngay</a>
+                    </div>
+                    <div class="col-md-4 landing-blog-post" data-aos="fade-up">
+                        <img src="{{ url_for('static',filename='images/anh-flask.png') }}" alt="blog post" class="blog-post-thumbnail">
+                        <h4 class="blog-post-title">Giới thiệu về Flask</h4>
+                        <a href="{{ url_for('blog2') }}" class="blog-post-link">Đọc ngay</a>
+                    </div>
+                    <div class="col-md-4 landing-blog-post" data-aos="fade-left">
+                        <img src="{{ url_for('static',filename='images/anh-nhung-ly-do-ma-ban-nen-chon-flask.png') }}" alt="blog post" class="blog-post-thumbnail">
+                        <h4 class="blog-post-title">Những lý do mà bạn nên chọn Flask</h4>
+                        <a href="{{ url_for('blog3') }}" class="blog-post-link">Đọc ngay</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="edica-landing-section edica-landing-blog">
+        <div class="container">
+        </div>
+    </section>
+    <footer class="edica-footer" data-aos="fade-up">
+        <div class="container">
+            <div class="row footer-widget-area">
+                <div class="col-md-3">
+                    <a href="index.html" class="footer-brand-wrapper">
+                        <img src="{{ url_for('static',filename='images/logo.svg') }}" alt="edica logo">
+                    </a>
+                    <p class="Contact">ngodinhluan567@gmail.com</p>
+                    <p class="contact-details">+123456789</p>
+                    <nav class="footer-social-links">
+                        <a href="https://www.facebook.com/ldn3004/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/naul_dinh/"><i class="fab fa-instagram"></i></a>
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <nav class="footer-nav">
+                        <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+                        <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                        
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <nav class="footer-nav">
+                        <a href="{{ url_for('blog') }}" class="nav-link">Blog</a>
+                        <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+                       
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <div class="dropdown footer-country-dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="footerCountryDropdown" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                   <span class="flag-icon flag-icon-vn flag-icon-squared"></span> Viet Nam <i class="fas fa-chevron-down ml-2"></i>
+                                </button>
+                        <div class="dropdown-menu" aria-labelledby="footerCountryDropdown">
+                            <button class="dropdown-item" href="#">
+                                    <span class="flag-icon flag-icon-us flag-icon-squared"></span> United States
+                                </button>
+                            <button class="dropdown-item" href="#">
+                                <span class="flag-icon flag-icon-au flag-icon-squared"></span> Australia
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </footer>
+    <script src="{{ url_for('static',filename='vendors/popper.js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendors/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+    <script>
+        AOS.init({
+            duration: 2000
+        });
+      </script>
+</body>
+</html>
