@@ -7,7 +7,7 @@
     <title>Blogndl: Home</title>
     <meta name = "description" content = "Đây là Blog của mình"/>
     <meta name="google-site-verification" content="elFmtIS7AwagxVGFiAhEIixZu9rCxcVoTHjVc2rEMag" />
-
+    
     <link rel="canonical" href="https://blog-ndl.herokuapp.com/" />
     <link rel="stylesheet" href="{{ url_for('static',filename='vendors/flag-icon-css/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='vendors/font-awesome/css/all.min.css') }}">
@@ -15,7 +15,15 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
     <script src="{{ url_for('static',filename='vendors/jquery/jquery.min.js') }}"></script>
     <script src="{{ url_for('static',filename='js/loader.js') }}"></script>
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6S6TQERY0E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6S6TQERY0E');
+</script>
 </head>
 <body>
     <div class="edica-loader"></div>
